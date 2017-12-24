@@ -1,3 +1,4 @@
+// Objects need 2 classes - one for the type of object and a tester class to create and access Objects
 class Dog {
   int size;
   String breed;
