@@ -28,3 +28,5 @@ class ElectricGuitar {
     rockStarUsesIt = yesOrNo;
   }
 }
+
+// Here we are exposing the object's data, must hide the data and call from the setters 
