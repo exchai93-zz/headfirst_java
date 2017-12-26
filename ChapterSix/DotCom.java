@@ -4,6 +4,7 @@ public class DotCom {
 
   int[] locationCells;
   int numOfHits = 0;
+  String name;
 
   private ArrayList<String> location Cells;
 
