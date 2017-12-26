@@ -1,17 +1,16 @@
-import java.util.ArrayList;
+import java.util;
 
 public class DotCom {
-
-  int[] locationCells;
-  int numOfHits = 0;
-  String name;
-
-  private ArrayList<String> location Cells;
-
+  // Instance variables
+  private ArrayList<String> locationCells;
+  private String name;
+  // Setter method that updates the DotCom's location
   public void setLocationCells(ArrayList<String> loc) {
-    locationCells = loc;
+    locationCells = loc
+    // Basic setter method
+  public void setName(String n) {
+    name = n;
   }
-
   public String checkYourself(String userInput) {
     // Make a variable to hold the result we'll return - 'miss' is the default
     String result = "miss";
@@ -23,6 +22,7 @@ public class DotCom {
 
       if(locationCells.isEmpty()) {
         result = "kill";
+        System.out.println("Ouch! You sunk " + name + " : ( ");
       } else {
         result = "hit";
       }
