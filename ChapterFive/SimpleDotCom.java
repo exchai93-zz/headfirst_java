@@ -1,7 +1,7 @@
 public class SimpleDotCom {
 
   int[] locationCells;
-  int[] nummOfHits = 0;
+  int numOfHits = 0;
 
   public void setLocationCells(int[] locs) {
     locationCells = locs;
@@ -17,16 +17,16 @@ public class SimpleDotCom {
       // Compare the user guess to this element in the array
       if (guess == cell) {
         result = "hit";
-        nummOfHits++;
+        numOfHits++;
         // Get out of the loop, no need to test other cells
         break;
       }
     }
     // If we are hit three times, we are 'dead'
-    if (nummOfHits == locationCells.length) {
+    if (numOfHits == locationCells.length) {
       result = "kill";
     }
-    // Display tge result for the user 
+    // Display tge result for the user
     System.out.println(result);
       return result;
   }
