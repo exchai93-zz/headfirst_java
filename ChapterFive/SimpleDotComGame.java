@@ -15,12 +15,12 @@ public class SimpleDotComGame {
     while (isAlive == true) {
       // Get user input
       String guess = helper.getUserInput("enter a number");
-      // Ask the game to check the guess and save the returned result in a String 
+      // Ask the game to check the guess and save the returned result in a String
       String result = game.checkYourself(guess);
       numOfGuesses++;
       if (result.equals("kill")) {
         isAlive = false;
-        Systme.out.println("You took " + numOfGuesses + " guesses");
+        System.out.println("You took " + numOfGuesses + " guesses");
       }
     }
   }

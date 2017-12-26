@@ -1,4 +1,4 @@
-import java.io;
+import java.io.*;
 
 public class GameHelper {
   public String getUserInput(String prompt) {
@@ -6,7 +6,7 @@ public class GameHelper {
     System.out.print(prompt + " ");
     try {
       BufferedReader is = new BufferedReader(
-      new InputStreamReader(Sytem.in));
+      new InputStreamReader(System.in));
       inputLine = is.readLine();
       if (inputLine.length() == 0) return null;
     } catch (IOException e) {
