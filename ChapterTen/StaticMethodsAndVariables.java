@@ -33,3 +33,11 @@ public class Duck {
     return size;
   }
 }
+
+// Static Initializer
+class Foo {
+  final static int X;
+  static {
+    X = 42;
+  }
+}
