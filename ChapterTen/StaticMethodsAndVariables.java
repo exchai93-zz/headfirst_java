@@ -34,9 +34,15 @@ public class Duck {
   }
 }
 
+// Initialize a static final variable:
+// At the time you declare it
+public class Foo {
+  public static final int FOO_X = 25;
+}
 // Static Initializer
 class Foo {
   final static int X;
+  // This code runs as soon as the class is loaded, before any static method is called
   static {
     X = 42;
   }
