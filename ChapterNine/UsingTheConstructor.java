@@ -22,6 +22,12 @@ public class UseADuck {
 // Using a constructor to initialize the Duck state
 public class Duck {
   int size;
+
+  public Duck() {
+    // Supply a default size
+    size = 27;
+  }
+
   // Add an int parameter to the Duck constructor
   public Duck(int duckSize) {
     System.out.println("Quack");
@@ -38,3 +44,9 @@ public class UseADuck {
     Duck d = new Duck(42);
   }
 }
+
+// Maing a Duck when you know the size:
+Duck d = new Duck(15);
+
+// Making a duck when you do not know the size:
+Duck d = new Duck();
