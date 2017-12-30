@@ -8,7 +8,7 @@ public class ExTestDrive {
       System.out.print("t");
       doRisky(test);
 
-      System.out.prin("o");
+      System.out.print("o");
     } catch(MyEx e) {
       System.out.print("a");
     } finally {
