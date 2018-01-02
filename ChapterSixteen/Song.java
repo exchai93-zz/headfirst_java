@@ -1,9 +1,15 @@
-class Song {
+// Song objects can be compared to other Song objects for the purpose of sorting
+class Song implements Comparable<Song> {
   // 4 instance variables for the song attributes in the file
   String title;
   String artist;
   String rating;
   String bpm;
+  // Sort() method sends a Song to compareTo() to see how that Song compares to the Song on which the method was invoked
+  public int compareTo(Song s) {
+    // Pass the work on to the title String objects, since we know Strings have a CompareTo() method 
+    return title.compareTo(s.getTitle());
+ }
 
   Song(String t, String a, String r, String b) {
     title = t;
@@ -25,7 +31,7 @@ class Song {
     return bpm;
   }
   // Override toString() becuase when you println(aSongObject), want to see the title.
-  // When you do println(aListOfSongs), it calls the toString() method of EACH element in the list 
+  // When you do println(aListOfSongs), it calls the toString() method of EACH element in the list
   public String toString() {
     return title;
   }
