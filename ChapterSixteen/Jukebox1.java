@@ -22,18 +22,18 @@ public class Jukebox1 {
     Collections.sort(songList);
     System.out.println(songList);
     // Make an instance of the Comparator inner class
-    ArtistCompare artistCompare = new Artistcompare();
-    // Invoke sort(), passing it the list and a refrence to the new custom Comparator object 
+    ArtistCompare artistCompare = new ArtistCompare();
+    // Invoke sort(), passing it the list and a refrence to the new custom Comparator object
     Collections.sort(songList, artistCompare);
   }
 
-  public void go() {
+  void getSongs() {
     getSongs();
     try {
       File file = new File("SongList.txt");
       BufferedReader reader = new BufferedReader(new FileReader(file));
       String line = null;
-      while ((line = reader.readline()) != null) {
+      while ((line = reader.readLine()) != null) {
         addSong(line);
       }
     } catch(Exception ex) {
