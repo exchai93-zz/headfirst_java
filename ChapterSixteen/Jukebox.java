@@ -7,6 +7,13 @@ public class Jukebox1 {
   public static void main(String[] args) {
     new Jukebox1().go();
   }
+  // Create a new inner class that implements Comparator
+  class ArtistCompare implements Comparator<Song> {
+    public int compare(Song one, Song two) {
+      // Letting the String variables (for artist) do the actual comparison
+      return one.getArtist().compareTo(two.getArtist());
+    }
+  }
 
   public void go() {
     getSongs();
@@ -14,6 +21,10 @@ public class Jukebox1 {
     // Call the static Collections sort() method, then print the list again
     Collections.sort(songList);
     System.out.println(songList);
+    // Make an instance of the Comparator inner class
+    ArtistCompare artistCompare = new Artistcompare();
+    // Invoke sort(), passing it the list and a refrence to the new custom Comparator object 
+    Collections.sort(songList, artistCompare);
   }
 
   public void go() {
@@ -31,7 +42,7 @@ public class Jukebox1 {
   }
   void addSong(String lineToParse) {
     String[] tokens = lineToParse.split("/");
-    // Create a new Song object using the four tokens then add the Song to the list 
+    // Create a new Song object using the four tokens then add the Song to the list
     Song nextSong = new Song(tokens[0], tokens[1], tokens[2], tokens[3]);
     songList.add(nextSong);
   }
