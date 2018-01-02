@@ -5,9 +5,18 @@ class Song implements Comparable<Song> {
   String artist;
   String rating;
   String bpm;
+  // The HashSet sends it another Song
+  public boolean equals(Object aSong) {
+    Song s = (Song) aSong;
+    return getTitle().equals.(s.getTitle());
+  }
+  // String class has an overridden hashCode() method 
+  public int hashCode() {
+    return title.hashCode()
+  }
   // Sort() method sends a Song to compareTo() to see how that Song compares to the Song on which the method was invoked
   public int compareTo(Song s) {
-    // Pass the work on to the title String objects, since we know Strings have a CompareTo() method 
+    // Pass the work on to the title String objects, since we know Strings have a CompareTo() method
     return title.compareTo(s.getTitle());
  }
 

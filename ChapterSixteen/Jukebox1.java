@@ -21,14 +21,16 @@ public class Jukebox1 {
     // Call the static Collections sort() method, then print the list again
     Collections.sort(songList);
     System.out.println(songList);
+    HashSet<Song> songSet = new HashSet<Song>();
+    songSet.addAll(songList);
+    System.out.println(songSet);
     // Make an instance of the Comparator inner class
-    ArtistCompare artistCompare = new ArtistCompare();
+    // ArtistCompare artistCompare = new ArtistCompare();
     // Invoke sort(), passing it the list and a refrence to the new custom Comparator object
-    Collections.sort(songList, artistCompare);
+    // Collections.sort(songList, artistCompare);
   }
 
   void getSongs() {
-    getSongs();
     try {
       File file = new File("SongList.txt");
       BufferedReader reader = new BufferedReader(new FileReader(file));
